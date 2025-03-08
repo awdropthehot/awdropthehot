@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport"
     content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0" />
-  <title>Leeyunseok Archive</title>
+  <title>2025 AW Pathe A</title>
   <!-- 구글 폰트 추가 -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/hxk7khp.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="./style.css">
@@ -15,240 +16,96 @@
 </head>
 
 <body>
-  <div class="screen1">
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img class="logo" src="./images/leeyunseokarchiveLogoTp.png" alt="Logo" onclick="window.location.reload();" />
-        </div>
-        <div class="swiper-slide">
-          <div class="swiper mySwiper2">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"><img class="icon" src="./images/person.svg" alt="Person Icon" /></div>
-              <div class="swiper-slide">
-                <p class="textBox">
-                  <span class="title">Lee Yunseok</span>
-                  <br>
-                  May 1, 2003
-                  <br>
-                  Daejeon, Korea
-                  <br>
-                  AI Dept., Undergrad
-                  <br>
-                  Programming Student
-                  <br>
-                  Video Producer
-                </p>
-              </div>
-              <div class="swiper-slide">
-                <p class="textBox">
-                  <span class="title">Technologies</span>
-                  <br>
-                  Premiere Pro
-                  <br>
-                  After Effects
-                  <br>
-                  Photoshop
-                  <br>
-                  Java
-                  <br>
-                  Python
-                  <br>
-                  HTML/JS/CSS
-                </p>
-              </div>
-              <div class="swiper-slide">
-                <div class="content">
-                  <span class="title">Insta</span>
-                  <img class="innerIcon" src="./images/camera.svg"
-                    onclick="window.open('https://www.instagram.com/oskueny', '_blank');" />
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="content">
-                  <span class="title">Youtube</span>
-                  <img class="innerIcon" src="./images/youtube.svg"
-                    onclick="window.open('https://www.youtube.com/@leeyunseokarchive', '_blank');" />
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="content">
-                  <span class="title">Email</span>
-                  <!-- 이메일 아이콘 클릭 시 클립보드로 이메일 복사 -->
-                  <img class="innerIcon" src="./images/mail.svg" onclick="copyEmail();" />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="swiper mySwiper3">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"><img class="icon" src="./images/code.svg" alt="Code Icon" /></div>
-              <div class="swiper-slide">
-                <p class="textBox">
-                  <span class="title">Experience</span>
-                  <br>
-                  2022 - Present
-                  <br>
-                  Specializing in HTML, JavaScript for web development, and applied Python for data analysis.
-                </p>
-              </div>
-              <div class="swiper-slide">
-                <div class="content">
-                  <span class="title">Github</span>
-                  <img class="innerIcon" src="./images/git.svg"
-                    onclick="window.open('https://github.com/leeyunseokarchive', '_blank');" />
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="content">
-                  <span class="title">. . .</span>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="swiper mySwiper4">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"><img class="icon" src="./images/movie.svg" alt="Movie Icon" /></div>
-              <div class="swiper-slide">
-                <p class="textBox">
-                  <span class="title">Experience</span>
-                  <br>
-                  2017 - Present
-                  <br>
-                  Edited over 200 freelance videos in diverse fields such as real estate, conferences, and youtube
-                  channels.
-                </p>
-              </div>
-              <div class="swiper-slide">
-                <div class="content">
-                  <span class="title">Real Estate<br>Information Video</span>
-                  <img class="innerIcon" src="./images/open.svg" onclick=moveToNextScreen() />
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="content">
-                  <span class="title">. . .</span>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-pagination h-pagination"></div>
-    </div>
-  </div>
+  <div class="scroll-arrow" id="upArrow">︽</div>
 
-  <div class="screen2">
-    <button class="backButton" onclick="moveBack()">Back</button>
-    <div class="swiper mySwiper5">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="video-container">
-            <div class="yt-player" data-id="MxBRpWcXeOA"></div>
-            </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="video-container">
-            <div class="yt-player" data-id="MxBRpWcXeOA"></div>
-            </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="video-container">
-            <div class="yt-player" data-id="MxBRpWcXeOA"></div>
-            </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="video-container">
-            <div class="yt-player" data-id="MxBRpWcXeOA"></div>
-            </div>
-        </div>
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="./images/poster.png" />
+      </div>
+      <div class="swiper-slide context">
+        <h1>
+          the A
+        </h1>
+        <p>
+          Since 2000. 유구한 역사를 지닌 충남대학교  
+          <br>흑인음악동아리 AW가 2025년 3월 22일  
+          <br>'the A' 파티에 당신을 초대합니다.
+        </p>
+        <p>
+          3시간 가량의 힙합 디제잉과 에너지 넘치는  
+          <br>라이브 공연, 그리고 무한 제공되는
+          <br>생맥주와 함께 자유와 젊음을 갈망하세요.
+        </p>
+        <img src="./images/awSpinningLogo.gif" />
+      </div>
+      <div class="swiper-slide context">
+        <h1>Date & Location</h1>
+        <p>
+          2025.03.22 (SAT)
+          <br>20:00 - 21:00 Hiphop DJing
+          <br>21:00 - 22:00 Live Performance
+          <br>22:00 - 23:00 Hiphop DJing
+        </p>
+        <p>
+          대전광역시 서구 대덕대로162번길 11
+          <br>지하 1층 인터플레이
+          <br>1434 Galma-dong Seo-gu, Daejeon 35265
+          <br>B1 INTERPLAY
+        </p>
+        <img style="display: block; margin: 0 auto; width: 70%; border-radius: 15px;" src="./images/location.png" />
+      </div>
+      <div class="swiper-slide context">
+        <h1>Entrance</h1>
+        <p>
+          3월 22일 공연 관람객 한정
+          <br>생맥주 무한 제공
+        </p>
+        <p>
+          사전 예약 : 10,000₩
+          <br>현장 구매 : 15,000₩
+        </p>
+        <p>
+          사전 예약 구글폼
+        </p>
+        <img style="width: 30%; height: auto;"src="./images/ticket.png" />
+
       </div>
     </div>
   </div>
 
+  <div class="scroll-arrow" id="downArrow">︾</div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var swiper = new Swiper(".mySwiper", {
-        effect: "cube",
-        grabCursor: true,
-        cubeEffect: {
-          shadow: true,
-          slideShadows: true,
-          shadowOffset: 20,
-          shadowScale: 0.94,
-        },
-        pagination: {
-          el: ".swiper-pagination.h-pagination",
-          clickable: true,
-        },
-        loop: true,
-      });
+    var swiper = new Swiper(".mySwiper", {
+      direction: "vertical", // 세로 슬라이드
+      mousewheel: true, // 마우스 휠로 슬라이드 가능
+      keyboard: {
+        enabled: true, // 방향키로 조작 가능
+      },
+      on: {
+        slideChange: function () {
+          // 첫 슬라이드에서 upArrow 숨기기
+          if (swiper.isBeginning) {
+            document.querySelector('#upArrow').style.display = 'none';
+          } else {
+            document.querySelector('#upArrow').style.display = 'block';
+          }
 
-      var verticalSwipers = [".mySwiper2", ".mySwiper3", ".mySwiper4"];
-      verticalSwipers.forEach(function (selector) {
-        new Swiper(selector, {
-          direction: "vertical",
-          spaceBetween: 50,
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-        });
-      });
-
-      var swiper5 = new Swiper(".mySwiper5", {
-        direction: "vertical", // 세로 슬라이드 설정
-        centeredSlides: true, // 활성화된 슬라이드가 중앙에 오도록 설정
-        coverflowEffect: {
-          rotate: 50, // 회전 각도 설정
-          stretch: 0, // 슬라이드가 늘어나는 정도
-          depth: 150, // 깊이 설정
-          modifier: 1, // 효과의 강도
-          slideShadows: true, // 슬라이드 그림자 효과
-        },
-        pagination: {
-          el: ".swiper-pagination", // 페이지네이션 위치 설정
-          clickable: true, // 클릭 가능하도록 설정
-        },
-      });
-
-    });
-
-    // 이메일을 클립보드에 복사하는 함수
-    function copyEmail() {
-      var email = 'dbstjr3576@naver.com'; // 여기에 이메일
-      navigator.clipboard.writeText(email).then(function () {
-        alert('Email successfully copied to clipboard!');
-      }).catch(function (error) {
-        alert('Failed to copy email to clipboard.');
-      });
-    }
-
-    let isMoved = false; // 화면 이동 여부 체크
-
-    // 화면을 왼쪽으로 이동하는 함수
-    function moveToNextScreen() {
-      if (!isMoved) {
-        document.querySelector("body").style.transform = "translateX(-100vw)"; // 화면을 왼쪽으로 이동
-        document.querySelector(".backButton").style.display = "block"; // 돌아가기 버튼 보이게 하기
-        isMoved = true; // 이동 상태 설정
+          // 마지막 슬라이드에 도달했을 때 화살표 숨기기
+          if (swiper.isEnd) {
+            document.querySelector('#downArrow').style.display = 'none';
+          } else {
+            document.querySelector('#downArrow').style.display = 'block';
+          }
+        }
       }
-    }
-
-    // 돌아가기 버튼 클릭 시 화면을 원래대로 돌리는 함수
-    function moveBack() {
-      document.querySelector("body").style.transform = "translateX(0)"; // 화면을 원래 위치로 돌리기
-      document.querySelector(".backButton").style.display = "none"; // 돌아가기 버튼 숨기기
-      isMoved = false; // 이동 상태 초기화
-    }
-
+    });
   </script>
 </body>
 

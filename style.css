@@ -12,139 +12,91 @@ html {
 
 body {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-family: 'Noto Sans KR', sans-serif;
   touch-action: none;
   position: relative;
   top: 0px;
   left: 0px;
   min-width: 340px;
-  width: 200vw;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: #eeeeee;
+  color: #0D0D0D;
   transition: all 0.5s ease;
   overflow: hidden;
 }
 
-.screen1 {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative; /* 부모 요소에 position 설정 */
-}
-
-.screen2 {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative; /* 부모 요소에 position 설정 */
-}
-
 .swiper {
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%); /* 중앙 정렬 */
-}
-
-.swiper5 {
-  width: 100%; /* 부모 요소에 맞게 크기 설정 */
-  height: 100vh; /* 화면 크기에 맞게 높이 설정 */
-  position: relative; /* 부모 요소에 position 설정 */
+  width: 400px;
+  height: 500px;
+  left: auto;
+  top: auto;
+  transform: none; /* 중앙 정렬 */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fafafa;
+  background-image: url("./images/background.png"); /* 경로 수정 */
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.context {
+  padding: 40px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.logo {
-  display: block;
-  width: 80%;
-  height: 80%;
-  object-fit: cover;
+.context h1, h2 {
+  font-family: "norman-variable", sans-serif;
+  font-variation-settings: "wght" 800;
 }
 
-.icon {
-  display: block;
-  width: 50%;
-  height: 50%;
-  object-fit: cover;
-}
-
-/* 페이지네이션 기본 스타일 */
-.swiper-pagination {
-  opacity: 1;
-  transition: opacity 0.5s ease;
-}
-
-/* 페이지네이션이 비활성화될 때의 스타일 */
-.swiper-pagination.inactive {
-  opacity: 0;
-}
-
-.swiper-pagination.h-pagination {
+/* 화살표 스타일 */
+.scroll-arrow {
   position: absolute;
-  top: -30px;
-  /* Adjust this value as needed */
   left: 50%;
   transform: translateX(-50%);
-  z-index: -100;
+  font-size: 30px;
+  color: #0D0D0D;
+  animation: moveUpDown 1.5s ease-in-out infinite, blink 1.5s ease-in-out infinite; /* 두 가지 애니메이션 추가 */
 }
 
-/* 기본 bullet 색상 */
-.swiper-pagination-bullet {
-  background-color: #333333;
+#upArrow {
+  display: none;
+  top: calc(50% - 320px);
 }
 
-/* 활성화된 bullet 색상 */
-.swiper-pagination-bullet-active {
-  background-color: #333333;
+#downArrow {
+  bottom: calc(50% - 320px);
 }
 
-.content {
-  display: flex;
-  flex-direction: column; /* 세로로 정렬 */
-  align-items: center; /* 가운데 정렬 */
-  text-align: center; /* 텍스트 가운데 정렬 */
+/* 위아래로 움직이는 애니메이션 */
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(10px); /* 10px 아래로 */
+  }
 }
 
-.textBox {
-   width: 180px;
-   text-align: left;
-}
-
-.title {
-  display: inline-block;
-  font-size: 1.2em;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.innerIcon {
-  display: block;
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-}
-
-.backButton {
-  display: block;
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-  position: absolute;
-  top: 10px;
-  left: 10px;
+/* 깜빡이는 애니메이션 */
+@keyframes blink {
+  0%, 25% {
+    opacity: 1;
+  }
+  25%, 50% {
+    opacity: 0.1;
+  }
 }
