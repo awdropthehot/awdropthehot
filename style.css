@@ -24,9 +24,20 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: #eeeeee;
+  font-size: 0.9rem;
   color: #0D0D0D;
-  transition: all 0.5s ease;
   overflow: hidden;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .swiper {
@@ -51,13 +62,13 @@ body {
 }
 
 .context {
-  padding: 40px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 
-.context h1, h2 {
+.context h1 {
   font-family: "norman-variable", sans-serif;
   font-variation-settings: "wght" 800;
 }
@@ -74,11 +85,11 @@ body {
 
 #upArrow {
   display: none;
-  top: calc(50% - 320px);
+  top: calc(50% - 280px);
 }
 
 #downArrow {
-  bottom: calc(50% - 320px);
+  bottom: calc(50% - 280px);
 }
 
 /* 위아래로 움직이는 애니메이션 */
