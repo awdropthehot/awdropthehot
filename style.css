@@ -30,8 +30,8 @@ body {
 }
 
 .swiper {
-  width: 400px;
-  height: 500px;
+  width: 320px;
+  height: 400px;
   left: auto;
   top: auto;
   transform: none; /* 중앙 정렬 */
