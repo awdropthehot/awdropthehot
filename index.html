@@ -77,7 +77,12 @@
         <a href="https://www.instagram.com/awdropthehot/" target="_blank">
           <img style="width: 60px; height: 60px; margin-top: -5px"src="./images/insta.png" />
         </a>
-
+        <p>
+          <b>공유</b>
+        </p>
+        <a href="#" onclick="sharePage()">
+          <img style="width: 50px; height: 50px; margin-left: 5px;" src="./images/share.png" />
+        </a>
       </div>
     </div>
   </div>
@@ -113,6 +118,20 @@
         }
       }
     });
+
+    function sharePage() {
+      if (navigator.share) {
+        navigator.share({
+          title: "2025 AW Party the A", 
+          text: "흑인음악동아리 AW가 2025년 3월 22일 'the A' 파티에 당신을 초대합니다.", 
+          url: "https://awdropthehot.github.io/awdropthehot/"
+        })
+        .then(() => console.log("Sharing Succeed!"))
+        .catch((error) => console.error("Sharing Failed!", error));
+      } else {
+        alert("This browser does not support the sharing feature!");
+      }
+    }
   </script>
 </body>
 
