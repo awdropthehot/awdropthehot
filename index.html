@@ -1,138 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0" />
-  <title>2025 AW Party A</title>
-  <!-- 구글 폰트 추가 -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.typekit.net/hxk7khp.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="./style.css">
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AW Drop The Hot</title>
+  <link rel="icon" href="data:," />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
 </head>
-
 <body>
-  <div class="scroll-arrow" id="upArrow">︽</div>
+  <main class="stage" aria-label="AW Drop The Hot">
+    <video class="logo" src="./images/awSpinningLogo.webm" autoplay loop muted playsinline></video>
 
-  <!-- Swiper -->
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="./images/poster.png" />
-      </div>
-      <div class="swiper-slide context">
-        <h1>
-          the A
-        </h1>
-        <p>
-          Since 2000. 유구한 역사를 지닌 충남대학교  
-          <br>흑인음악동아리 AW가 2025년 3월 22일  
-          <br>'the A' 파티에 당신을 초대합니다.
-        </p>
-        <p>
-          Since 2000, Chungnam National University, with its long history,  
-          <br>the Black Music Club AW invites you to 'the A' party on March 22, 2025.
-      </p>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="menuPanel">
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+      <span class="sr-only">Menu</span>
+    </button>
 
-        <img style="margin-top:-10px; height: auto;" src="./images/awSpinningLogo.gif" />
+    <section id="menuPanel" class="menu-panel" aria-hidden="true">
+      <button class="menu-close" type="button" aria-label="Close menu">✕</button>
+      <div class="menu-content">
+        <button class="menu-link info-trigger" type="button">INFO</button>
+        <a class="menu-link" href="https://www.youtube.com/@awdropthehot" target="_blank" rel="noopener noreferrer">YOUTUBE</a>
+        <a class="menu-link" href="https://www.instagram.com/awdropthehot/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+        <a class="menu-link" href="https://soundcloud.com/awdropthehot" target="_blank" rel="noopener noreferrer">SOUNDCLOUD</a>
       </div>
-      <div class="swiper-slide context">
-        <h1>Date & Location</h1>
-        <p>
-          2025.03.22 (SAT)
-          <br>20:00 - 21:00 Hiphop DJing
-          <br>21:00 - 22:00 Live Performance
-          <br>22:00 - 23:00 Hiphop DJing
-        </p>
-        <p>
-          대전광역시 서구 대덕대로162번길 11
-          <br>지하 1층 인터플레이
-          <br>1434 Galma-dong Seo-gu, Daejeon
-          <br>35265 B1 INTERPLAY
-        </p>
-        <img style="display: block; margin: 5px auto 0; width: 70%; border-radius: 15px;" src="./images/location.png" />
-      </div>
-      <div class="swiper-slide context">
-        <h1>Entrance</h1>
-        <p>
-          <b>입장료 : 무료</b>
-        </p>
-        <p>
-          주류 및 칵테일 별도 구매
-          <br>(구매 시 신분증 지참)
-        </p>
-        <!-- <p>
-          <b>사전 예약 구글폼</b>
-        </p>
-        <a href="https://구글폼 링크.com" target="_blank">
-          <img style="width: 60px; height: 60px; margin-top: -5px"src="./images/ticket.png" />
-        </a> -->
-        <p style="margin-top: 50px;">
-          <b>문의 및 지원</b>
-        </p>
-        <a href="https://www.instagram.com/awdropthehot/" target="_blank">
-          <img style="width: 60px; height: 60px;"src="./images/insta.png" />
-        </a>
-        <p>
-          <b>공유</b>
-        </p>
-        <a href="#" onclick="sharePage()">
-          <img style="width: 50px; height: 50px; margin-left: 5px;" src="./images/share.png" />
-        </a>
-      </div>
+    </section>
+
+  </main>
+  <footer class="footer">ⓒ 2000 AW. All Rights Reserved</footer>
+  <section id="info" class="info">
+    <div class="info-block">
+      <h2>INFO</h2>
+      <p>충남대학교 흑인음악∙서브컬처 동아리 AW입니다.</p>
+      <p>AW is a Black music and subculture club at CNU.</p>
     </div>
-  </div>
+    <div class="info-block">
+      <h2>LOCATION</h2>
+      <p>(34134) 대전광역시 유성구 대학로 99 1학생회관 지하 1층 B106 AW</p>
+      <p>99 Daehak-ro, Yuseong-gu, Daejeon 34134, Republic of Korea</p>
+    </div>
+    <div class="info-block">
+      <h2>SUPPLY</h2>
+      <p>인스타그램 DM 또는 이메일로 간단한 자기소개를 보내주세요.</p>
+      <p>Please send a brief self-introduction via Instagram DM or email.</p>
+      <p>awdropthehot@gmail.com</p>
+    </div>
+  </section>
 
-  <div class="scroll-arrow" id="downArrow">︾</div>
-
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <!-- Initialize Swiper -->
   <script>
-    var swiper = new Swiper(".mySwiper", {
-      direction: "vertical", // 세로 슬라이드
-      mousewheel: true, // 마우스 휠로 슬라이드 가능
-      keyboard: {
-        enabled: true, // 방향키로 조작 가능
-      },
-      on: {
-        slideChange: function () {
-          // 첫 슬라이드에서 upArrow 숨기기
-          if (swiper.isBeginning) {
-            document.querySelector('#upArrow').style.display = 'none';
-          } else {
-            document.querySelector('#upArrow').style.display = 'block';
-          }
+    const menuButton = document.querySelector('.menu-button');
+    const menuPanel = document.querySelector('#menuPanel');
+    const menuClose = document.querySelector('.menu-close');
+    const infoButton = document.querySelector('.info-trigger');
 
-          // 마지막 슬라이드에 도달했을 때 화살표 숨기기
-          if (swiper.isEnd) {
-            document.querySelector('#downArrow').style.display = 'none';
-          } else {
-            document.querySelector('#downArrow').style.display = 'block';
-          }
-        }
+    const openMenu = () => {
+      menuPanel.setAttribute('aria-hidden', 'false');
+      menuButton.setAttribute('aria-expanded', 'true');
+      menuPanel.classList.add('open');
+    };
+
+    const closeMenu = () => {
+      menuPanel.setAttribute('aria-hidden', 'true');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuPanel.classList.remove('open');
+    };
+
+    menuButton.addEventListener('click', () => {
+      if (menuPanel.classList.contains('open')) {
+        closeMenu();
+      } else {
+        openMenu();
       }
     });
 
-    function sharePage() {
-      if (navigator.share) {
-        navigator.share({
-          title: "2025 AW Party the A", 
-          text: "흑인음악동아리 AW가 2025년 3월 22일 'the A' 파티에 당신을 초대합니다.", 
-          url: "https://awdropthehot.github.io/awdropthehot/"
-        })
-        .then(() => console.log("Sharing Succeed!"))
-        .catch((error) => console.error("Sharing Failed!", error));
-      } else {
-        alert("This browser does not support the sharing feature!");
+    menuPanel.addEventListener('click', (event) => {
+      if (event.target === menuPanel) {
+        closeMenu();
       }
-    }
+    });
+
+    menuClose.addEventListener('click', closeMenu);
+    infoButton.addEventListener('click', () => {
+      closeMenu();
+      document.querySelector('#info')?.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && menuPanel.classList.contains('open')) {
+        closeMenu();
+      }
+    });
   </script>
 </body>
-
 </html>
