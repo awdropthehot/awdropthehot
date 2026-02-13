@@ -28,6 +28,7 @@
         <a class="menu-link" href="https://www.youtube.com/@awdropthehot" target="_blank" rel="noopener noreferrer">YOUTUBE</a>
         <a class="menu-link" href="https://www.instagram.com/awdropthehot/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
         <a class="menu-link" href="https://soundcloud.com/awdropthehot" target="_blank" rel="noopener noreferrer">SOUNDCLOUD</a>
+        <button class="menu-link music-toggle" type="button">TURN IT UP</button>
       </div>
     </section>
 
@@ -57,6 +58,8 @@
     const menuPanel = document.querySelector('#menuPanel');
     const menuClose = document.querySelector('.menu-close');
     const infoButton = document.querySelector('.info-trigger');
+    const logoVideo = document.querySelector('.logo');
+    const musicToggle = document.querySelector('.music-toggle');
 
     const openMenu = () => {
       menuPanel.setAttribute('aria-hidden', 'false');
@@ -95,6 +98,92 @@
         closeMenu();
       }
     });
+
+    const ensureVideoPlaying = () => {
+      if (!logoVideo) return;
+      const tryPlay = () => {
+        if (logoVideo.ended) {
+          logoVideo.currentTime = 0;
+        }
+        const playPromise = logoVideo.play();
+        if (playPromise && typeof playPromise.catch === 'function') {
+          playPromise.catch(() => {});
+        }
+      };
+      if (logoVideo.readyState >= 2) {
+        tryPlay();
+      } else {
+        logoVideo.addEventListener('loadeddata', tryPlay, { once: true });
+      }
+    };
+
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) {
+        ensureVideoPlaying();
+      }
+    });
+
+    window.addEventListener('pageshow', (event) => {
+      if (event.persisted && logoVideo) {
+        logoVideo.load();
+      }
+      ensureVideoPlaying();
+    });
+
+    window.addEventListener('focus', ensureVideoPlaying);
+    ensureVideoPlaying();
+
+    const musicFiles = [
+      'Award Tour.mp3',
+    ];
+    const musicTracks = musicFiles.map((name) => `./musics/${encodeURIComponent(name)}`);
+    const musicPlayer = new Audio();
+    musicPlayer.preload = 'auto';
+    let isPlaying = false;
+    let currentTrack = 0;
+
+    const updateMusicButton = () => {
+      if (!musicToggle) return;
+      musicToggle.textContent = isPlaying ? 'CUT IT OFF' : 'TURN IT UP';
+      musicToggle.setAttribute('aria-pressed', isPlaying ? 'true' : 'false');
+    };
+
+    const playTrack = (index) => {
+      currentTrack = index % musicTracks.length;
+      musicPlayer.src = musicTracks[currentTrack];
+      const playPromise = musicPlayer.play();
+      if (playPromise && typeof playPromise.catch === 'function') {
+        playPromise.catch(() => {});
+      }
+    };
+
+    musicPlayer.addEventListener('ended', () => {
+      if (!isPlaying || musicTracks.length === 0) return;
+      playTrack((currentTrack + 1) % musicTracks.length);
+    });
+
+    if (musicToggle) {
+      musicToggle.addEventListener('click', () => {
+        if (musicTracks.length === 0) return;
+        if (isPlaying) {
+          musicPlayer.pause();
+          isPlaying = false;
+        } else {
+          if (!musicPlayer.src) {
+            playTrack(currentTrack);
+          } else {
+            const playPromise = musicPlayer.play();
+            if (playPromise && typeof playPromise.catch === 'function') {
+              playPromise.catch(() => {});
+            }
+          }
+          isPlaying = true;
+        }
+        updateMusicButton();
+      });
+    }
+
+    updateMusicButton();
   </script>
 </body>
 </html>

@@ -16,7 +16,8 @@
 
 html,
 body {
-  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
   font-family: "Space Grotesk", "Apple SD Gothic Neo", sans-serif;
   background: var(--bg);
   color: var(--ink);
@@ -25,7 +26,8 @@ body {
 
 .stage {
   position: relative;
-  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -174,7 +176,8 @@ body {
 }
 
 .info {
-  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
   padding: 120px 10vw 140px;
   display: grid;
   gap: 48px;
